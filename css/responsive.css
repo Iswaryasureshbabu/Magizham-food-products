@@ -1,0 +1,480 @@
+/* ==========================================
+   RESPONSIVE CSS
+   Desktop, Laptop, Tablet & Mobile
+========================================== */
+
+/* ===========================
+   Large Desktop (1400px+)
+=========================== */
+
+@media (min-width:1400px){
+    section{
+        padding:70px 12%;
+    }
+    footer{
+        padding:45px 12% 20px;
+    }
+}
+
+/* ===========================
+   Laptop / Medium (1200px)
+=========================== */
+
+@media (max-width:1200px){
+    header{
+        padding:0 4%;
+    }
+    section{
+        padding:60px 5%;
+    }
+    .search-box{
+        width:140px;
+    }
+    .hero-content h1{
+        font-size:48px;
+    }
+    .hero-content p{
+        font-size:20px;
+    }
+    .product-grid{
+        grid-template-columns:repeat(4,1fr);
+        gap:18px;
+    }
+    .category-banner{
+        padding:45px 5%;
+    }
+    .category-banner h1{
+        font-size:34px;
+    }
+    .breadcrumb{
+        padding:10px 5%;
+    }
+}
+
+/* ===========================
+   Tablet Large (992px)
+=========================== */
+
+@media (max-width:992px){
+    header{
+        padding:0 20px;
+        height:55px;
+    }
+    .logo img{
+        width:32px;
+        height:32px;
+    }
+    .logo h2{
+        font-size:14px;
+    }
+    .logo p{
+        display:none;
+    }
+    .menu-toggle{
+        display:block;
+    }
+    nav{
+        position:absolute;
+        top:55px;
+        left:-100%;
+        width:100%;
+        background:#fff;
+        transition:.4s;
+        box-shadow:0 10px 20px rgba(0,0,0,.08);
+    }
+    nav.active{
+        left:0;
+    }
+    nav ul{
+        flex-direction:column;
+        padding:20px;
+        gap:16px;
+    }
+    .header-right{
+        display:none;
+    }
+    .{
+        margin-top:55px;
+    }
+    .hero-content{
+        left:7%;
+        max-width:500px;
+    }
+    .hero-content h1{
+        font-size:42px;
+    }
+    .hero-content p{
+        font-size:18px;
+    }
+    .about{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+    .about-image{
+        order:1;
+    }
+    .about-text{
+        order:2;
+    }
+    .product-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:18px;
+    }
+    .footer-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+    .category-banner h1{
+        font-size:30px;
+    }
+    .category-controls{
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .category-controls .search-box{
+        width:100%;
+    }
+}
+
+/* ===========================
+   Tablet / Mobile (768px)
+=========================== */
+
+@media (max-width:768px){
+    section{
+        padding:50px 20px;
+    }
+    section h2{
+        font-size:30px;
+        margin-bottom:35px;
+    }
+    section h2::after{
+        width:70px;
+        bottom:-10px;
+    }
+    .hero{
+        height:80vh;
+    }
+    .hero-content{
+        left:20px;
+        right:20px;
+    }
+    .hero-content h1{
+        font-size:34px;
+    }
+    .hero-content p{
+        font-size:16px;
+        line-height:1.7;
+    }
+    .btn{
+        padding:12px 25px;
+        font-size:15px;
+    }
+    .category-grid,
+    .product-grid,
+    .why-grid,
+    .contact-box{
+        grid-template-columns:1fr;
+    }
+    .card,
+    .product,
+    .contact-box div{
+        margin:auto;
+    }
+    footer{
+        padding:35px 20px 18px;
+        text-align:center;
+    }
+    .footer-container{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+    .footer-col a{
+        display:inline-block;
+        margin:5px 10px;
+    }
+    .footer-col h3{
+        margin-bottom:12px;
+    }
+    .footer-bottom{
+        flex-direction:column;
+        text-align:center;
+    }
+    .social{
+        justify-content:center;
+    }
+    .floating-whatsapp{
+        width:50px;
+        height:50px;
+        font-size:24px;
+    }
+    .category-banner{
+        padding:35px 20px;
+    }
+    .category-banner h1{
+        font-size:26px;
+    }
+    .breadcrumb{
+        padding:8px 20px;
+        font-size:12px;
+    }
+    .categories,
+    .products,
+    .why,
+    .about{
+        padding-top:60px;
+        padding-bottom:60px;
+    }
+    .breadcrumb + .products{
+        padding-top:20px;
+    }
+}
+
+/* ===========================
+   Small Mobile (576px)
+=========================== */
+
+@media (max-width:576px){
+    header{
+        padding:0 12px;
+        height:55px;
+    }
+    .logo h2{
+        font-size:14px;
+    }
+    .logo img{
+        width:30px;
+        height:30px;
+        border-width:2px;
+    }
+    .hero{
+        height:70vh;
+    }
+    .hero-content{
+        top:50%;
+    }
+    .hero-content h1{
+        font-size:26px;
+    }
+    .hero-content p{
+        font-size:14px;
+    }
+    section h2{
+        font-size:26px;
+    }
+    .product h3{
+        font-size:18px;
+    }
+    .product-grid{
+        grid-template-columns:1fr;
+    }
+    .product img{
+        height:200px;
+    }
+    .card i{
+        font-size:42px;
+    }
+    .why-grid i{
+        font-size:42px;
+    }
+    .contact-box i{
+        font-size:36px;
+    }
+    .product-actions{
+        flex-direction:column;
+        gap:8px;
+    }
+    .add-cart,
+    .buy-now{
+        width:100%;
+    }
+    .product-desc{
+        font-size:12px;
+    }
+    .offers-content p{
+        font-size:15px;
+    }
+    footer h3{
+        font-size:16px;
+    }
+    .footer-col a{
+        display:block;
+        margin:7px 0;
+    }
+    .footer-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .category-banner h1{
+        font-size:22px;
+    }
+    .category-banner p{
+        font-size:14px;
+    }
+    .about-text p{
+        font-size:15px;
+    }
+    .contact-box div{
+        padding:25px;
+    }
+}
+
+/* ===========================
+   Extra Small (400px)
+=========================== */
+
+@media (max-width:400px){
+    .hero-content h1{
+        font-size:22px;
+    }
+    .hero-content p{
+        font-size:13px;
+    }
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+    .logo h2{
+        font-size:13px;
+    }
+    section{
+        padding:40px 14px;
+    }
+    .category-banner{
+        padding:30px 14px;
+    }
+    .category-banner h1{
+        font-size:20px;
+    }
+}
+
+/* ===========================
+   Landscape Phones
+=========================== */
+
+@media (max-height:500px){
+    .hero{
+        height:100vh;
+    }
+    .hero-content{
+        top:55%;
+    }
+    .hero-content h1{
+        font-size:30px;
+    }
+}
+
+/* ===========================
+   General Responsive Helpers
+=========================== */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+table{
+    width:100%;
+    overflow-x:auto;
+    display:block;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+*{
+    word-wrap:break-word;
+}
+
+button,
+.btn{
+    max-width:100%;
+}
+
+input,
+select{
+    max-width:100%;
+}
+
+/* ===========================
+   Cart Page Responsive
+=========================== */
+
+@media (max-width:768px){
+    .cart-page{
+        padding:40px 20px;
+    }
+    .cart-item{
+        flex-wrap:wrap;
+        gap:12px;
+    }
+    .cart-qty{
+        order:3;
+    }
+}
+
+@media (max-width:576px){
+    .cart-item img{
+        width:55px;
+        height:55px;
+    }
+    .cart-item-info h3{
+        font-size:14px;
+    }
+    .cart-total{
+        font-size:19px;
+    }
+}
+
+/* ===========================
+   End Responsive CSS
+=========================== */
+
+/* ===========================================
+   PHASE 5 - category cards stay two per row on tablets and phones
+   (six cards: 2 x 3 instead of one very tall column)
+=========================================== */
+@media (max-width:768px){
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+    .category-grid .card{
+        margin:0;
+        width:100%;
+        padding:24px 12px;
+    }
+    .category-grid .card i{
+        font-size:38px;
+        margin-bottom:12px;
+    }
+    .category-grid .card h3{
+        font-size:16px;
+        line-height:1.35;
+        overflow-wrap:anywhere;
+    }
+}
+
+/* Product cards fill their grid cell instead of shrinking to their text,
+   so every card in a column has the same width. */
+@media (max-width:768px){
+    .product-grid .product{
+        margin:0;
+        width:100%;
+    }
+}
+
+/* PHASE 6 - narrow screens: long Tamil labels may wrap instead of overflowing */
+@media (max-width:576px){
+    .product-actions{
+        flex-wrap:wrap;
+    }
+    .product-actions .add-cart,
+    .product-actions .buy-now{
+        flex:1 1 100%;
+    }
+    .footer-col a,
+    .footer-col p{
+        overflow-wrap:anywhere;
+    }
+}

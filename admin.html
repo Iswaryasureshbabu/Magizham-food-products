@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" data-key="metaDesc" content="Magizham Food Products - Homemade podi, soup, kanji mix, pickle, kulambu and malt varieties. Pure, natural, authentic taste delivered to your doorstep.">
+
+  <title data-key="pageTitle">Magizham Food Products - Traditional Taste</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+
+  <a href="index.html" class="logo" title="Magizham Food Products">
+
+    <img src="images/logo.png" data-key="logoAlt" alt="Magizham Food Products">
+
+    <div>
+
+      <h2 data-key="logoTitle">Magizham Food Products</h2>
+      <p data-key="logoSubtitle">Traditional Taste</p>
+
+    </div>
+
+  </a>
+
+  <nav>
+
+    <ul>
+
+      <li><a href="index.html" data-key="home">Home</a></li>
+      <li><a href="index.html#categories" data-key="categories">Categories</a></li>
+      <li><a href="index.html#offers" data-key="offers">Offers</a></li>
+      <li><a href="index.html#about" data-key="about">About</a></li>
+      <li><a href="index.html#contact" data-key="contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <div class="header-right">
+
+    <div class="search-box" title="Search" data-key="searchTooltip">
+
+      <input type="text" data-key="searchPlaceholder" placeholder="Search products...">
+
+      <button>
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+      </button>
+
+      <div class="search-results"></div>
+
+    </div>
+
+    <select id="language">
+
+      <option value="English">English</option>
+        <option value="தமிழ்">தமிழ்</option>
+
+    </select>
+
+    <a href="cart.html" class="cart" title="View Cart" data-key="cartTooltip">
+
+      <i class="fa-solid fa-cart-shopping"></i>
+
+      <span class="cart-count" id="cartCount">0</span>
+
+    </a>
+
+    <a href="https://wa.me/919842805607" class="whatsapp-btn" data-key="whatsappBtn">
+
+      Order Now
+
+    </a>
+
+  </div>
+
+  <div class="menu-toggle">
+
+    <i class="fas fa-bars"></i>
+
+  </div>
+
+</header>
+
+<section class="mz-page" id="adminPage">
+
+  <h1 data-key="adminTitle">Administration</h1>
+
+  <p class="mz-subtitle" data-key="adminSubtitle">Products, categories, orders and customers of Magizham Food Products.</p>
+
+  <div class="mz-tabs">
+
+    <button type="button" class="mz-tab active" data-tab="dashboard">
+      <span data-key="adminDashboard">Dashboard</span>
+    </button>
+
+    <button type="button" class="mz-tab" data-tab="products">
+      <span data-key="adminProducts">Products</span>
+    </button>
+
+    <button type="button" class="mz-tab" data-tab="categories">
+      <span data-key="adminCategories">Categories</span>
+    </button>
+
+    <button type="button" class="mz-tab" data-tab="orders">
+      <span data-key="adminOrders">Orders</span>
+    </button>
+
+    <button type="button" class="mz-tab" data-tab="users">
+      <span data-key="adminUsers">Customers</span>
+    </button>
+
+  </div>
+
+  <!-- Dashboard -->
+  <div class="mz-panel active" data-panel="dashboard">
+
+    <div class="mz-stats" id="adminStats"></div>
+
+  </div>
+
+  <!-- Products -->
+  <div class="mz-panel" data-panel="products">
+
+    <div class="mz-toolbar">
+
+      <input type="search" id="adminProductSearch" data-key="adminSearchProducts" placeholder="Search products...">
+
+      <button type="button" class="mz-btn" data-new-product>
+        <i class="fa-solid fa-plus"></i> <span data-key="adminNewProduct">New product</span>
+      </button>
+
+    </div>
+
+    <div class="mz-table-wrap">
+
+      <table class="mz-table">
+
+        <thead>
+          <tr>
+            <th data-key="adminColId">ID</th>
+            <th data-key="adminColImage">Image</th>
+            <th data-key="adminColName">Name</th>
+            <th data-key="categories">Category</th>
+            <th data-key="priceLabel">Price</th>
+            <th data-key="adminColStock">Stock</th>
+            <th data-key="adminColAvailable">Available</th>
+            <th data-key="adminColActions">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminProductsBody"></tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- Categories -->
+  <div class="mz-panel" data-panel="categories">
+
+    <div class="mz-toolbar">
+
+      <span></span>
+
+      <button type="button" class="mz-btn" data-new-category>
+        <i class="fa-solid fa-plus"></i> <span data-key="adminNewCategory">New category</span>
+      </button>
+
+    </div>
+
+    <div class="mz-table-wrap">
+
+      <table class="mz-table">
+
+        <thead>
+          <tr>
+            <th data-key="adminColId">ID</th>
+            <th data-key="adminColName">Name</th>
+            <th data-key="adminColProducts">Products</th>
+            <th data-key="adminColActions">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminCategoriesBody"></tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- Orders -->
+  <div class="mz-panel" data-panel="orders">
+
+    <div class="mz-toolbar">
+
+      <select id="adminOrderFilter">
+        <option value="" data-key="adminAllStatuses">All statuses</option>
+        <option value="pending">pending</option>
+        <option value="confirmed">confirmed</option>
+        <option value="packed">packed</option>
+        <option value="shipped">shipped</option>
+        <option value="delivered">delivered</option>
+        <option value="cancelled">cancelled</option>
+      </select>
+
+    </div>
+
+    <div class="mz-table-wrap">
+
+      <table class="mz-table">
+
+        <thead>
+          <tr>
+            <th data-key="adminColId">ID</th>
+            <th data-key="adminColCustomer">Customer</th>
+            <th data-key="phoneLabel">Phone</th>
+            <th data-key="cartTotal">Total</th>
+            <th data-key="adminColStatus">Status</th>
+            <th data-key="adminColActions">Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminOrdersBody"></tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- Customers -->
+  <div class="mz-panel" data-panel="users">
+
+    <div class="mz-table-wrap">
+
+      <table class="mz-table">
+
+        <thead>
+          <tr>
+            <th data-key="adminColId">ID</th>
+            <th data-key="nameLabel">Name</th>
+            <th data-key="emailLabel">E-mail address</th>
+            <th data-key="adminColRole">Role</th>
+            <th data-key="adminColOrders">Orders</th>
+          </tr>
+        </thead>
+
+        <tbody id="adminUsersBody"></tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Modal -->
+<div class="mz-modal" id="mzModal">
+
+  <div class="mz-modal-box">
+
+    <div class="mz-modal-head">
+
+      <h3 id="mzModalTitle">Product</h3>
+
+      <button type="button" class="mz-modal-close" aria-label="Close">&times;</button>
+
+    </div>
+
+    <form id="mzProductForm" class="mz-form" novalidate>
+
+      <div class="mz-field">
+        <label for="productCategory" data-key="categories">Category</label>
+        <select id="productCategory" name="category_id" required></select>
+      </div>
+
+      <div class="mz-field">
+        <label for="productName" data-key="adminColName">Name</label>
+        <input type="text" id="productName" name="product_name" required>
+      </div>
+
+      <div class="mz-field">
+        <label for="productNameTa" data-key="adminColNameTa">Name (Tamil)</label>
+        <input type="text" id="productNameTa" name="product_name_ta">
+      </div>
+
+      <div class="mz-field">
+        <label for="productDescription" data-key="adminColDescription">Description</label>
+        <textarea id="productDescription" name="description"></textarea>
+      </div>
+
+      <div class="mz-field">
+        <label for="productDescriptionTa" data-key="adminColDescriptionTa">Description (Tamil)</label>
+        <textarea id="productDescriptionTa" name="description_ta"></textarea>
+      </div>
+
+      <div class="mz-field">
+        <label for="productPrice" data-key="priceLabel">Price</label>
+        <input type="number" id="productPrice" name="price" step="0.01" min="0" required>
+      </div>
+
+      <div class="mz-field">
+        <label for="productWeight" data-key="weightLabel">Weight</label>
+        <input type="text" id="productWeight" name="weight">
+      </div>
+
+      <div class="mz-field">
+        <label for="productImagePreset" data-key="adminColImage">Product Image</label>
+        <div style="display:flex; flex-direction:column; gap:8px;">
+          <select id="productImagePreset">
+            <option value="">-- Select from Existing Assets --</option>
+            <option value="images/placeholder-product.png">images/placeholder-product.png (Neutral placeholder - no photo yet)</option>
+            <option value="images/idli-podi.jpg">images/idli-podi.jpg (Idli Podi)</option>
+            <option value="images/sambar.jpg">images/sambar.jpg (Sambar Powder)</option>
+            <option value="images/rasam.jpg">images/rasam.jpg (Rasam Powder)</option>
+            <option value="images/paruppu-podi.jpg">images/paruppu-podi.jpg (Paruppu / Satham Podi)</option>
+            <option value="images/drumstick-leaf-podi.jpg">images/drumstick-leaf-podi.jpg (Murungai Podi)</option>
+            <option value="images/curry-leaf-podi.jpg">images/curry-leaf-podi.jpg (Kariveppilai Podi)</option>
+            <option value="images/pirandai-thokku.jpg">images/pirandai-thokku.jpg (Pirandai Thokku / Podi)</option>
+            <option value="images/garlic-podi.jpg">images/garlic-podi.jpg (Poondu Podi)</option>
+            <option value="images/thalippu-vadagam.jpg">images/thalippu-vadagam.jpg (Thalippu Vadagam)</option>
+            <option value="images/curry-masala.jpg">images/curry-masala.jpg (Garam Masala)</option>
+            <option value="images/chilli-powder.jpg">images/chilli-powder.jpg (Kulambu Chilli / 65 Masala)</option>
+            <option value="images/turmeric-powder.jpg">images/turmeric-powder.jpg (Turmeric / Aavaram / Lemon)</option>
+            <option value="images/drumstick-soup.jpg">images/drumstick-soup.jpg (Murungai Keerai / Herbal Soup)</option>
+            <option value="images/karuppu-kavuni-kanji.jpg">images/karuppu-kavuni-kanji.jpg (Karuppu Kavuni / Kanji Mix)</option>
+            <option value="images/tomato-pickle.jpg">images/tomato-pickle.jpg (Tomato / Onion Thokku)</option>
+            <option value="images/garlic-pickle.jpg">images/garlic-pickle.jpg (Garlic Pickle)</option>
+            <option value="images/pickle.jpg">images/pickle.jpg (Mango / Sundakkai Pickle)</option>
+            <option value="images/lemon-pickle.jpg">images/lemon-pickle.jpg (Lemon / Maa Inji / Citron Pickle)</option>
+            <option value="images/vatha-kulambu.jpg">images/vatha-kulambu.jpg (Vathakulambu / Poondu Milagu)</option>
+            <option value="images/abc-malt.jpg">images/abc-malt.jpg (ABC Malt / Beetroot / Ragi Malt)</option>
+          </select>
+          <input type="text" id="productImage" name="image_url" placeholder="or enter path: images/example.jpg">
+          <div id="productImagePreviewWrap" style="display:flex; align-items:center; gap:12px; margin-top:4px;">
+            <img id="productImagePreview" src="images/idli-podi.jpg" alt="Preview" style="width:60px; height:60px; object-fit:cover; border-radius:8px; border:1px solid #ddd; display:none;">
+            <span id="productImagePreviewText" style="font-size:12px; color:#777;">Select or type an image path to preview</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mz-field">
+        <label for="productStock" data-key="adminColStock">Stock</label>
+        <input type="number" id="productStock" name="stock_quantity" min="0" required>
+      </div>
+
+      <div class="mz-field">
+        <label for="productAvailable" data-key="adminColAvailable">Available</label>
+        <input type="checkbox" id="productAvailable" name="is_available" checked>
+      </div>
+
+      <button type="submit" class="mz-submit" data-key="adminSave">Save</button>
+
+    </form>
+
+    <form id="mzCategoryForm" class="mz-form" novalidate style="display:none">
+
+      <div class="mz-field">
+        <label for="categoryName" data-key="adminColName">Name</label>
+        <input type="text" id="categoryName" name="category_name" required>
+      </div>
+
+      <div class="mz-field">
+        <label for="categoryNameTa" data-key="adminColNameTa">Name (Tamil)</label>
+        <input type="text" id="categoryNameTa" name="category_name_ta">
+      </div>
+
+      <div class="mz-field">
+        <label for="categorySlug" data-key="adminColSlug">Slug</label>
+        <input type="text" id="categorySlug" name="category_slug" placeholder="podi">
+      </div>
+
+      <div class="mz-field">
+        <label for="categoryDescription" data-key="adminColDescription">Description</label>
+        <textarea id="categoryDescription" name="description"></textarea>
+      </div>
+
+      <div class="mz-field">
+        <label for="categoryDescriptionTa" data-key="adminColDescriptionTa">Description (Tamil)</label>
+        <textarea id="categoryDescriptionTa" name="description_ta"></textarea>
+      </div>
+
+      <div class="mz-field">
+        <label for="categoryOrder">Display Order</label>
+        <input type="number" id="categoryOrder" name="display_order" min="0" value="0">
+      </div>
+
+      <div class="mz-field">
+        <label for="categoryActive">Active in Customer Storefront</label>
+        <input type="checkbox" id="categoryActive" name="is_active" checked>
+      </div>
+
+      <button type="submit" class="mz-submit" data-key="adminSave">Save</button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<footer>
+
+  <div class="footer-container">
+
+    <div class="footer-col footer-brand">
+
+      <h3 data-key="footerTitle">Magizham Food Products</h3>
+
+      <p data-key="footerDesc">Traditional Taste. Homemade podi, soup, kanji mix, pickle, kulambu and malt varieties, from our kitchen to yours.</p>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h3 data-key="quickLinks">Quick Links</h3>
+
+      <a href="index.html" data-key="footerHome">Home</a>
+
+      <a href="index.html#categories" data-key="footerCategories">Categories</a>
+
+      <a href="index.html#about" data-key="footerAbout">About</a>
+
+      <a href="index.html#contact" data-key="footerContact">Contact</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h3 data-key="categories">Categories</h3>
+
+      <a href="category.html?type=podi" data-key="catPodi">Podi Varieties</a>
+
+      <a href="category.html?type=soup" data-key="catSoup">Soup Varieties</a>
+
+      <a href="category.html?type=kanji" data-key="catKanji">Kanji Mix</a>
+
+      <a href="category.html?type=pickles" data-key="catPickle">Pickle Varieties</a>
+
+      <a href="category.html?type=kulambu" data-key="catKulambu">Kulambu Varieties</a>
+
+      <a href="category.html?type=malt" data-key="catMalt">Malt Varieties</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h3 data-key="followUs">Follow Us</h3>
+
+      <div class="social">
+
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+
+        <a href="https://wa.me/919842805607" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p class="copyright" data-key="copyright">&copy; 2026 Magizham Food Products. All Rights Reserved.</p>
+
+    <div class="footer-links">
+
+      <a href="#" data-key="privacyPolicy">Privacy Policy</a>
+
+      <span class="footer-sep">|</span>
+
+      <a href="#" data-key="termsConditions">Terms &amp; Conditions</a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<a href="https://wa.me/919842805607" class="floating-whatsapp" title="Order on WhatsApp" data-key="whatsappTooltip">
+
+  <i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script src="js/products.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+<script src="js/router.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/language.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

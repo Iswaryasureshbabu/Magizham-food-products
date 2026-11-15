@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Magizham Food Products - Administration Portal Login. Secure access for product and order management.">
+  <title data-key="adminLoginTitle">Admin Portal Login - Magizham Food Products</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="mz-admin-auth-body">
+
+<header class="mz-admin-header">
+  <a href="index.html" class="logo" title="Magizham Food Products">
+    <img src="images/logo.png" alt="Magizham Food Products">
+    <div>
+      <h2>Magizham Food Products</h2>
+      <p class="admin-badge"><i class="fa-solid fa-shield-halved"></i> Admin Portal</p>
+    </div>
+  </a>
+
+  <div class="header-right">
+    <select id="language" aria-label="Select Language">
+      <option value="English">English</option>
+      <option value="தமிழ்">தமிழ்</option>
+    </select>
+    <a href="index.html" class="mz-back-link" title="Return to Storefront">
+      <i class="fa-solid fa-store"></i> <span data-key="viewStorefront">Storefront</span>
+    </a>
+  </div>
+</header>
+
+<main class="mz-page narrow mz-admin-login-page">
+  <div class="mz-admin-login-card mz-card">
+    <div class="mz-admin-icon-wrap">
+      <i class="fa-solid fa-user-shield"></i>
+    </div>
+
+    <h1 data-key="adminLoginHeading">Admin Sign In</h1>
+    <p class="mz-subtitle" data-key="adminLoginSubheading">Restricted portal for Magizham Food Products catalog and order management.</p>
+
+    <div id="formAlert" class="mz-alert" style="display:none" role="alert"></div>
+
+    <form id="adminLoginForm" class="mz-form" novalidate>
+      <div class="mz-field">
+        <label for="adminEmail" data-key="adminEmailLabel">Administrator E-mail</label>
+        <div class="mz-input-icon">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="adminEmail" name="email" autocomplete="username" placeholder="admin@magizhamfoods.com" required>
+        </div>
+      </div>
+
+      <div class="mz-field">
+        <label for="adminPassword" data-key="passwordLabel">Admin Password</label>
+        <div class="mz-input-icon">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="adminPassword" name="password" autocomplete="current-password" placeholder="••••••••" required>
+        </div>
+      </div>
+
+      <button type="submit" class="mz-submit mz-btn-admin" id="adminLoginBtn" data-key="adminLoginBtn">
+        <i class="fa-solid fa-right-to-bracket"></i> Sign In to Admin Portal
+      </button>
+    </form>
+
+    <div class="mz-admin-footer-links">
+      <p class="mz-customer-switch">
+        <span data-key="notAdminPrompt">Are you a customer?</span>
+        <a href="login.html" data-key="customerLoginLink">Customer Sign In</a>
+      </p>
+      <p class="mz-store-return">
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i> <span data-key="returnHome">Back to Home</span></a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-bottom">
+    <p class="copyright">&copy; 2026 Magizham Food Products. Administrative Access Only.</p>
+  </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/language.js"></script>
+<script src="js/admin-login.js"></script>
+</body>
+</html>

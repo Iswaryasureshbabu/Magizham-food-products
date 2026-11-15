@@ -1,0 +1,617 @@
+/* ===========================================
+   MAGIZHAM - STYLES FOR THE DATABASE POWERED PAGES
+   (login, register, checkout, orders, admin)
+
+   Every rule is prefixed with "mz-" so nothing here can
+   change the look of the existing pages.
+   =========================================== */
+
+.mz-account-area{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.mz-account{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 14px;
+    border-radius:40px;
+    background:transparent;
+    border:2px solid var(--green-dark);
+    color:var(--green-dark);
+    font-weight:600;
+    font-size:12px;
+    transition:.35s;
+    white-space:nowrap;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+}
+
+.mz-account:hover{
+    background:var(--green-dark);
+    color:#fff;
+}
+
+.mz-account.mz-logout:hover{
+    background:#e74c3c;
+    border-color:#e74c3c;
+    color:#fff;
+}
+
+/* ===========================================
+   PAGE SHELL
+=========================================== */
+
+.mz-page{
+    margin-top:55px;
+    min-height:60vh;
+    background:var(--light);
+    padding:60px 8%;
+}
+
+.mz-page.narrow{
+    max-width:620px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.mz-page h1{
+    font-size:34px;
+    color:var(--green-dark);
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.mz-page .mz-subtitle{
+    text-align:center;
+    color:#666;
+    font-size:14px;
+    margin-bottom:32px;
+}
+
+.mz-card{
+    background:#fff;
+    border-radius:20px;
+    padding:32px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(0,0,0,.05);
+}
+
+/* ===========================================
+   FORMS
+=========================================== */
+
+.mz-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.mz-field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.mz-field label{
+    font-size:13px;
+    font-weight:600;
+    color:var(--brown);
+}
+
+.mz-field input,
+.mz-field select,
+.mz-field textarea{
+    width:100%;
+    padding:12px 16px;
+    border:2px solid #eee;
+    border-radius:12px;
+    font-size:14px;
+    font-family:'Poppins',sans-serif;
+    background:#fff;
+    color:var(--brown);
+    transition:.25s;
+}
+
+.mz-field textarea{
+    resize:vertical;
+    min-height:90px;
+}
+
+.mz-field input:focus,
+.mz-field select:focus,
+.mz-field textarea:focus{
+    outline:none;
+    border-color:var(--green);
+    box-shadow:0 0 0 3px rgba(37,211,102,.15);
+}
+
+.mz-field input[aria-invalid="true"]{
+    border-color:#e74c3c;
+}
+
+.mz-field-error{
+    font-size:12px;
+    color:#e74c3c;
+    margin:0;
+    display:none;
+}
+
+.mz-hint{
+    font-size:12px;
+    color:#888;
+}
+
+.mz-submit{
+    width:100%;
+    margin-top:6px;
+    padding:14px 20px;
+    border:none;
+    border-radius:40px;
+    background:var(--green);
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    font-family:'Poppins',sans-serif;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.mz-submit:hover{
+    background:var(--green-dark);
+}
+
+.mz-submit[disabled]{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+.mz-alt{
+    text-align:center;
+    font-size:14px;
+    color:#666;
+    margin-top:18px;
+}
+
+.mz-alt a{
+    color:var(--green-dark);
+    font-weight:600;
+}
+
+.mz-alert{
+    padding:12px 16px;
+    border-radius:12px;
+    font-size:14px;
+    margin-bottom:18px;
+    background:#fdecea;
+    color:#c0392b;
+    border:1px solid #f5c6cb;
+}
+
+.mz-alert.mz-ok{
+    background:#eafaf0;
+    color:#1e7e46;
+    border-color:#b7e4c7;
+}
+
+/* ===========================================
+   CHECKOUT
+=========================================== */
+
+.mz-checkout{
+    display:grid;
+    grid-template-columns:1.4fr .9fr;
+    gap:25px;
+    align-items:start;
+}
+
+.mz-summary-row{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding:9px 0;
+    border-bottom:1px dashed #eee;
+    font-size:14px;
+    color:#555;
+}
+
+.mz-summary-row:last-child{
+    border-bottom:none;
+}
+
+.mz-summary-total{
+    font-size:19px;
+    font-weight:700;
+    color:var(--brown);
+    padding-top:12px;
+    border-top:2px solid var(--light);
+}
+
+.mz-summary-row span:last-child{
+    white-space:nowrap;
+}
+
+.mz-stock-warning{
+    font-size:12px;
+    color:#c0392b;
+    margin-top:2px;
+}
+
+/* ===========================================
+   ORDERS
+=========================================== */
+
+.mz-order{
+    background:#fff;
+    border-radius:18px;
+    padding:20px 22px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(0,0,0,.05);
+    margin-bottom:18px;
+}
+
+.mz-order-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+    padding-bottom:14px;
+    border-bottom:1px solid #f0f0f0;
+    margin-bottom:14px;
+}
+
+.mz-order-head h3{
+    font-size:17px;
+    color:var(--green-dark);
+}
+
+.mz-status{
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:40px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:capitalize;
+    background:#eee;
+    color:#555;
+}
+
+.mz-status.pending{
+    background:#fff4d6;
+    color:#b8860b;
+}
+
+.mz-status.confirmed{
+    background:#e3f2fd;
+    color:#1565c0;
+}
+
+.mz-status.packed{
+    background:#ede7f6;
+    color:#5e35b1;
+}
+
+.mz-status.shipped{
+    background:#e0f7fa;
+    color:#00838f;
+}
+
+.mz-status.delivered{
+    background:#e8f5e9;
+    color:#2e7d32;
+}
+
+.mz-status.cancelled{
+    background:#fdecea;
+    color:#c0392b;
+}
+
+.mz-order-items{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.mz-order-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:14px;
+    color:#555;
+}
+
+.mz-order-item img{
+    width:44px;
+    height:44px;
+    border-radius:10px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.mz-order-item .mz-qty{
+    color:#999;
+    font-size:12px;
+}
+
+.mz-order-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:14px;
+    font-size:13px;
+    color:#666;
+}
+
+.mz-order-meta strong{
+    color:var(--brown);
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:2px;
+}
+
+/* ===========================================
+   ADMIN
+=========================================== */
+
+.mz-tabs{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:26px;
+}
+
+.mz-tab{
+    padding:10px 20px;
+    border-radius:40px;
+    border:2px solid var(--green-dark);
+    background:transparent;
+    color:var(--green-dark);
+    font-weight:600;
+    font-size:13px;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+    transition:.3s;
+}
+
+.mz-tab:hover{
+    background:rgba(18,140,126,.08);
+}
+
+.mz-tab.active{
+    background:var(--green-dark);
+    color:#fff;
+}
+
+.mz-panel{
+    display:none;
+}
+
+.mz-panel.active{
+    display:block;
+}
+
+.mz-stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:18px;
+    margin-bottom:26px;
+}
+
+.mz-stat{
+    background:#fff;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:var(--shadow);
+    border:1px solid rgba(0,0,0,.05);
+}
+
+.mz-stat .mz-stat-value{
+    font-size:28px;
+    font-weight:700;
+    color:var(--green-dark);
+}
+
+.mz-stat .mz-stat-label{
+    font-size:12px;
+    color:#888;
+    margin-top:4px;
+}
+
+.mz-table-wrap{
+    background:#fff;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    overflow-x:auto;
+    border:1px solid rgba(0,0,0,.05);
+}
+
+.mz-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:13px;
+    min-width:720px;
+}
+
+.mz-table th,
+.mz-table td{
+    padding:12px 14px;
+    text-align:left;
+    border-bottom:1px solid #f2f2f2;
+    vertical-align:middle;
+}
+
+.mz-table th{
+    background:var(--light);
+    color:var(--green-dark);
+    font-weight:600;
+    white-space:nowrap;
+}
+
+.mz-table tr:last-child td{
+    border-bottom:none;
+}
+
+.mz-table img{
+    width:44px;
+    height:44px;
+    border-radius:9px;
+    object-fit:cover;
+}
+
+.mz-btn{
+    padding:7px 14px;
+    border-radius:40px;
+    border:none;
+    background:var(--green-dark);
+    color:#fff;
+    font-size:12px;
+    font-weight:600;
+    cursor:pointer;
+    font-family:'Poppins',sans-serif;
+    transition:.3s;
+}
+
+.mz-btn:hover{
+    background:var(--green);
+    color:#fff;
+}
+
+.mz-btn.ghost{
+    background:transparent;
+    color:var(--green-dark);
+    border:2px solid var(--green-dark);
+}
+
+.mz-btn.ghost:hover{
+    background:var(--green-dark);
+    color:#fff;
+}
+
+.mz-btn.danger{
+    background:#e74c3c;
+}
+
+.mz-btn.danger:hover{
+    background:#c0392b;
+}
+
+.mz-btn.small{
+    padding:5px 10px;
+    font-size:11px;
+}
+
+.mz-toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:18px;
+}
+
+.mz-toolbar input,
+.mz-toolbar select{
+    padding:10px 14px;
+    border:2px solid #eee;
+    border-radius:40px;
+    font-size:13px;
+    font-family:'Poppins',sans-serif;
+}
+
+.mz-empty{
+    text-align:center;
+    padding:44px 20px;
+    color:#888;
+    font-size:15px;
+}
+
+.mz-inline-form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:14px;
+    align-items:end;
+    margin-bottom:20px;
+}
+
+.mz-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:1500;
+    padding:20px;
+}
+
+.mz-modal.open{
+    display:flex;
+}
+
+.mz-modal-box{
+    background:#fff;
+    border-radius:20px;
+    padding:28px;
+    width:100%;
+    max-width:560px;
+    max-height:90vh;
+    overflow-y:auto;
+    box-shadow:var(--shadow);
+}
+
+.mz-modal-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:18px;
+}
+
+.mz-modal-head h3{
+    font-size:20px;
+    color:var(--green-dark);
+}
+
+.mz-modal-close{
+    background:transparent;
+    border:none;
+    font-size:20px;
+    color:#999;
+    cursor:pointer;
+    line-height:1;
+}
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media (max-width:900px){
+    .mz-checkout{
+        grid-template-columns:1fr;
+    }
+}
+
+@media (max-width:768px){
+    .mz-account .mz-account-text{
+        display:none;
+    }
+
+    .mz-account{
+        padding:7px 11px;
+    }
+
+    .mz-page{
+        padding:40px 5%;
+    }
+
+    .mz-card{
+        padding:22px;
+    }
+
+    .mz-page h1{
+        font-size:26px;
+    }
+}

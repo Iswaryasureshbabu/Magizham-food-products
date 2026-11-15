@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" data-key="metaDesc" content="Magizham Food Products - Homemade podi, soup, kanji mix, pickle, kulambu and malt varieties. Pure, natural, authentic taste delivered to your doorstep.">
+
+  <title data-key="pageTitle">Magizham Food Products - Traditional Taste</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<header>
+
+  <a href="index.html" class="logo" title="Magizham Food Products">
+
+    <img src="images/logo.png" data-key="logoAlt" alt="Magizham Food Products">
+
+    <div>
+
+      <h2 data-key="logoTitle">Magizham Food Products</h2>
+      <p data-key="logoSubtitle">Traditional Taste</p>
+
+    </div>
+
+  </a>
+
+  <nav>
+
+    <ul>
+
+      <li><a href="index.html" data-key="home">Home</a></li>
+      <li><a href="index.html#categories" data-key="categories">Categories</a></li>
+      <li><a href="index.html#offers" data-key="offers">Offers</a></li>
+      <li><a href="index.html#about" data-key="about">About</a></li>
+      <li><a href="index.html#contact" data-key="contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+  <div class="header-right">
+
+    <div class="search-box" title="Search" data-key="searchTooltip">
+
+      <input type="text" data-key="searchPlaceholder" placeholder="Search products...">
+
+      <button>
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+      </button>
+
+      <div class="search-results"></div>
+
+    </div>
+
+    <select id="language">
+
+      <option value="English">English</option>
+        <option value="தமிழ்">தமிழ்</option>
+
+    </select>
+
+    <a href="cart.html" class="cart" title="View Cart" data-key="cartTooltip">
+
+      <i class="fa-solid fa-cart-shopping"></i>
+
+      <span class="cart-count" id="cartCount">0</span>
+
+    </a>
+
+    <a href="https://wa.me/919842805607" class="whatsapp-btn" data-key="whatsappBtn">
+
+      Order Now
+
+    </a>
+
+  </div>
+
+  <div class="menu-toggle">
+
+    <i class="fas fa-bars"></i>
+
+  </div>
+
+</header>
+
+<section class="mz-page" id="checkoutPage">
+
+  <h1 data-key="checkoutTitle">Checkout</h1>
+
+  <p class="mz-subtitle" data-key="checkoutSubtitle">Tell us where the parcel has to go - we will call you before the delivery.</p>
+
+  <div id="checkoutEmpty" class="mz-card mz-empty" style="display:none">
+
+    <p data-key="checkoutEmptyText">Your cart is empty.</p>
+
+    <a href="category.html?type=podi" class="btn" data-key="cartContinue">Continue Shopping</a>
+
+  </div>
+
+  <div class="mz-checkout" id="checkoutFormBox">
+
+    <div class="mz-card">
+
+      <h3 data-key="checkoutDetails">Delivery details</h3>
+
+      <div id="formAlert" class="mz-alert" style="display:none"></div>
+
+      <form id="checkoutForm" class="mz-form" novalidate>
+
+        <div class="mz-field">
+
+          <label for="checkoutName" data-key="nameLabel">Your name</label>
+
+          <input type="text" id="checkoutName" name="customer_name" autocomplete="name" required>
+
+        </div>
+
+        <div class="mz-field">
+
+          <label for="checkoutPhone" data-key="phoneLabel">Phone number</label>
+
+          <input type="tel" id="checkoutPhone" name="phone" autocomplete="tel" required>
+
+        </div>
+
+        <div class="mz-field">
+
+          <label for="checkoutAddress" data-key="addressLabel">Delivery address</label>
+
+          <textarea id="checkoutAddress" name="delivery_address" autocomplete="street-address" required></textarea>
+
+        </div>
+
+        <button type="submit" class="mz-submit" name="placeOrder" data-key="checkoutPlace">Place the order</button>
+
+      </form>
+
+    </div>
+
+    <div class="mz-card">
+
+      <h3 data-key="checkoutSummaryTitle">Order summary</h3>
+
+      <div id="checkoutSummary"></div>
+
+      <a href="cart.html" class="btn" style="margin-top:18px" data-key="checkoutBackToCart">Back to the cart</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="footer-container">
+
+    <div class="footer-col footer-brand">
+
+      <h3 data-key="footerTitle">Magizham Food Products</h3>
+
+      <p data-key="footerDesc">Traditional Taste. Homemade podi, soup, kanji mix, pickle, kulambu and malt varieties, from our kitchen to yours.</p>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h3 data-key="quickLinks">Quick Links</h3>
+
+      <a href="index.html" data-key="footerHome">Home</a>
+
+      <a href="index.html#categories" data-key="footerCategories">Categories</a>
+
+      <a href="index.html#about" data-key="footerAbout">About</a>
+
+      <a href="index.html#contact" data-key="footerContact">Contact</a>
+
+    </div>
+
+    <div class="footer-col">
+
+      <h3 data-key="categories">Categories</h3>
+
+      <a href="category.html?type=podi" data-key="footerCatPodi">Podi Varieties</a>
+
+      <a href="category.html?type=soup" data-key="footerCatSoup">Soup Varieties</a>
+
+      <a href="category.html?type=kanji" data-key="footerCatKanji">Kanji Mix</a>
+
+      <a href="category.html?type=pickles" data-key="footerCatPickle">Pickle Varieties</a>
+
+      <a href="category.html?type=kulambu" data-key="footerCatKulambu">Kulambu Varieties</a>
+
+      <a href="category.html?type=malt" data-key="footerCatMalt">Malt Varieties</a></div>
+
+    <div class="footer-col">
+
+      <h3 data-key="followUs">Follow Us</h3>
+
+      <div class="social">
+
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+
+        <a href="https://wa.me/919842805607" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p class="copyright" data-key="copyright">&copy; 2026 Magizham Food Products. All Rights Reserved.</p>
+
+    <div class="footer-links">
+
+      <a href="#" data-key="privacyPolicy">Privacy Policy</a>
+
+      <span class="footer-sep">|</span>
+
+      <a href="#" data-key="termsConditions">Terms &amp; Conditions</a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<a href="https://wa.me/919842805607" class="floating-whatsapp" title="Order on WhatsApp" data-key="whatsappTooltip">
+
+  <i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script src="js/products.js"></script>
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/script.js"></script>
+<script src="js/router.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/language.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
